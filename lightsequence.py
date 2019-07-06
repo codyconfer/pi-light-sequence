@@ -23,23 +23,6 @@ class Grid:
     points = []
 
 
-class Sequencer:
-    def __init__(self):
-        self.welcome()
-        controller = GridController()
-        while True:
-            if len(Grid.points) < Sequence.max_nodes and randint(0, Sequence.skip_ratio) > 1:
-                Grid.points.append(Node())
-            controller.plot_points()
-            controller.update_positions()
-            time.sleep(Sequence.delay)
-
-    def welcome(self):
-        print("""--BEGIN
-            unicorn pi light sequence...ctrl + c to exit...
-        """)
-
-
 class GridController:
     def __init__(self):
         unicorn.set_layout(unicorn.AUTO)
@@ -101,4 +84,15 @@ class Node:
         self.colour = Sequence.colors[randint(0, max)]
 
 
-sequencer = Sequencer()
+print("""--BEGIN
+    unicorn pi light sequence...ctrl + c to exit...
+""")
+
+controller = GridController()
+
+while True:
+    if len(Grid.points) < Sequence.max_nodes and randint(0, Sequence.skip_ratio) > 1:
+        Grid.points.append(Node())
+        controller.plot_points()
+        controller.update_positions()
+        time.sleep(Sequence.delay)
