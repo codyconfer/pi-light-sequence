@@ -59,8 +59,9 @@ class GridController:
 
 class Node:
     def __init__(self):
-        self.direction = randint(0, 3)
-        self.direction_coordinate_determination(self.direction)
+        direction = randint(0, 3)
+        self.direction = direction
+        self.direction_coordinate_determination(direction)
         self.set_color()
 
     def direction_coordinate_determination(self, index):
