@@ -87,7 +87,7 @@ class Node:
             2: self.set_direction(self.get_dynamic_position(Grid.width - 1), Grid.height - 1),
             3: self.set_direction(Grid.width - 1, self.get_dynamic_position(Grid.height - 1)),
         }
-        return switch.get(index, self.get_dynamic_position(Grid.width - 1), 0)
+        return switch.get(index, (self.get_dynamic_position(Grid.width - 1), 0))
 
     def get_dynamic_position(self, max):
         return randint(0, max)
