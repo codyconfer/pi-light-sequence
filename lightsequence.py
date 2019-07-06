@@ -95,4 +95,4 @@ while True:
         Grid.points.append(Node())
         controller.plot_points()
         controller.update_positions()
-        time.sleep(Sequence.delay)
+    time.sleep(Sequence.delay)
