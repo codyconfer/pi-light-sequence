@@ -91,8 +91,7 @@ print("""--BEGIN
 controller = GridController()
 
 while True:
-    if len(Grid.points) < Sequence.max_nodes and randint(0, Sequence.skip_ratio) > 1:
-        Grid.points.append(Node())
-        controller.plot_points()
-        controller.update_positions()
+    Grid.points.append(Node())
+    controller.plot_points()
+    controller.update_positions()
     time.sleep(Sequence.delay)
