@@ -5,7 +5,7 @@ import unicornhat as unicorn
 
 
 class Sequence:
-    delay = 0.08
+    delay = 0.15
     max_nodes = 10
     skip_ratio = 5
     colors = purecolors
@@ -13,7 +13,7 @@ class Sequence:
 
 class Grid:
     rotation = 0
-    brightness = 0.5
+    brightness = 0.7
     # calculated values
     width, height = unicorn.get_shape()
     left = 0
