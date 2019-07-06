@@ -51,9 +51,9 @@ class GridController:
 
     def validate_point(self, point):
 
-        if Grid.right < point.x < Grid.left:
+        if Grid.left > point.x < Grid.right:
             Grid.points.remove(point)
-        if Grid.top < point.y < Grid.bottom:
+        if Grid.bottom > point.y < Grid.top:
             Grid.points.remove(point)
 
 
@@ -65,12 +65,12 @@ class Node:
 
     def direction_coordinate_determination(self, index):
         switch = {
-            0: self.set_direction(self.get_dynamic_position(Grid.width - 1), 0),
-            1: self.set_direction(0, self.get_dynamic_position(Grid.height - 1)),
-            2: self.set_direction(self.get_dynamic_position(Grid.width - 1), Grid.height - 1),
-            3: self.set_direction(Grid.width - 1, self.get_dynamic_position(Grid.height - 1)),
+            0: self.set_direction(self.get_dynamic_position(Grid.right), Grid.bottom),
+            1: self.set_direction(Grid.left, self.get_dynamic_position(Grid.top)),
+            2: self.set_direction(self.get_dynamic_position(Grid.right), Grid.top),
+            3: self.set_direction(Grid.right, self.get_dynamic_position(Grid.top)),
         }
-        return switch.get(index, (self.get_dynamic_position(Grid.width - 1), 0))
+        return switch.get(index, (self.get_dynamic_position(Grid.width - 1), Grid.bottom))
 
     def get_dynamic_position(self, max):
         return randint(0, max)
