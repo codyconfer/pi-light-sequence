@@ -51,9 +51,9 @@ class GridController:
 
     def validate_point(self, point):
 
-        if Grid.left > point.x < Grid.right:
+        if Grid.left < point.x > Grid.right:
             Grid.points.remove(point)
-        if Grid.bottom > point.y < Grid.top:
+        if Grid.bottom < point.y > Grid.top:
             Grid.points.remove(point)
 
 
