@@ -39,11 +39,11 @@ class GridController:
     def update_positions(self):
 
         for point in Grid.points:
-            if point.direction == 1:
+            if point.direction == 0:
                 point.y += 1
-            elif point.direction == 2:
+            elif point.direction == 1:
                 point.x += 1
-            elif point.direction == 3:
+            elif point.direction == 2:
                 point.y -= 1
             else:
                 point.x -= 1
