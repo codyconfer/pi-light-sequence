@@ -6,7 +6,7 @@ import unicornhat as unicorn
 
 class Sequence:
     delay = 0.15
-    node_draw_count = 8
+    node_draw_count = 32
     colors = purecolors
 
 
@@ -19,7 +19,7 @@ class Grid:
         self.bottom = 0
         self.points = []
     rotation = 90
-    brightness = 0.8
+    brightness = 0.5
 
 
 class GridController:
