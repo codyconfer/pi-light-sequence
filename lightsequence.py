@@ -6,7 +6,7 @@ import unicornhat as unicorn
 
 class Sequence:
     delay = 0.15
-    node_draw_count = 8
+    node_draw_count = 32
     colors = purecolors
 
 
