@@ -6,8 +6,8 @@ import unicornhat as unicorn
 
 class Sequence:
     delay = 0.15
-    max_nodes = 10
-    skip_ratio = 5
+    #max_nodes = 10
+    #skip_ratio = 5
     colors = purecolors
 
 
@@ -19,7 +19,7 @@ class Grid:
         self.left = 0
         self.bottom = 0
         self.points = []
-    rotation = 0
+    rotation = 90
     brightness = 0.7
 
 
@@ -93,8 +93,7 @@ grid = Grid()
 controller = GridController(grid)
 
 while True:
-    if len(grid.points) <= Sequence.max_nodes:
-        grid.points.append(Node(grid))
+    grid.points.append(Node(grid))
     controller.plot_points(grid)
     controller.update_positions(grid)
     time.sleep(Sequence.delay)
