@@ -95,6 +95,6 @@ controller = GridController(grid)
 while True:
     if len(grid.points) <= Sequence.max_nodes:
         grid.points.append(Node(grid))
-        controller.plot_points(grid)
-        controller.update_positions(grid)
+    controller.plot_points(grid)
+    controller.update_positions(grid)
     time.sleep(Sequence.delay)
