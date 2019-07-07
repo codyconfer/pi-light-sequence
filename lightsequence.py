@@ -19,7 +19,7 @@ class Grid:
         self.bottom = 0
         self.points = []
     rotation = 90
-    brightness = 0.8
+    brightness = 0.5
 
 
 class GridController:
