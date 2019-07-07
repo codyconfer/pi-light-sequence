@@ -1,13 +1,13 @@
 import time
 from random import randint
-from colors import purecolors
+from colors import cmy
 import unicornhat as unicorn
 
 
 class Sequence:
     delay = 0.15
-    node_draw_count = 32
-    colors = purecolors
+    node_draw_count = 48
+    colors = cmy
 
 
 class Grid:
